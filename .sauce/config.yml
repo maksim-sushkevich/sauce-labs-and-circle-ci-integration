@@ -18,7 +18,7 @@ xcuitest:
 suites:
   - name: "Forme Life Smote XC UI Test"
     testOptions:
-      class: ["FormeLifeUITests.SmokeUITests/test1177"]
+      class: ["FormeLifeUITests.SmokeUITests/test6755"]
     devices:
       # If set, only device by ID will be queried.
       #- id: <rdc_device_id>
