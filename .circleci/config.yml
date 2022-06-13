@@ -1,0 +1,42 @@
+version: 2.1
+orbs:
+  saucectl: saucelabs/saucectl-run@1.0.0
+
+jobs:
+  test-cypress:
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: 20.10.2
+      - saucectl/saucectl-run
+
+workflows:
+  version: 2
+  default_workflow:
+    jobs:
+      - test-cypress
+
+
+# .circleci/config.yml
+
+
+#version: 2.1
+#orbs:
+#  saucectl: saucelabs/saucectl-run@1.0.0
+#executors:
+#  ci-node:
+#    macos:
+#      xcode: 13.2.1
+#jobs:
+#  run-saucelabs-tests:
+#    executor: ci-node
+#    steps:
+#      - run:
+#          name: Check current folder
+#          command: pwd; ls -l
+#workflows:
+#  build-test-adhoc:
+#    jobs:
+#      - run-saucelabs-tests
