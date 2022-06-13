@@ -13,7 +13,7 @@ sauce:
 
 xcuitest:
   app: ./apps/FormeLife.ipa
-  testApp: ./apps/FormeLifeUITests-Runner.ipa
+  testApp: ./apps/AppleiOSAutomationUITests-Runner.ipa
 
 suites:
   - name: "Forme Life Smote XC UI Test"
